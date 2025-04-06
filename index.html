@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طقس الجزائر - dzMeteo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://i.imgur.com/xyz1234.png" alt="طقس الجزائر">
+                <h1>طقس الجزائر</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" id="citySearch" placeholder="ابحث عن مدينة...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#forecast"><i class="fas fa-chart-line"></i> النشرة الجوية</a></li>
+                <li><a href="#maps"><i class="fas fa-map"></i> خرائط الطقس</a></li>
+                <li><a href="#news"><i class="fas fa-newspaper"></i> أخبار الطقس</a></li>
+                <li><a href="#videos"><i class="fas fa-video"></i> فيديو الطقس</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <div class="weather-card">
+                <div class="current-weather" id="currentWeather">
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i> جاري تحميل بيانات الطقس...
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="forecast" class="section">
+            <h2><i class="fas fa-calendar-alt"></i> توقعات الطقس لـ 5 أيام</h2>
+            <div class="forecast-container" id="forecastContainer"></div>
+        </section>
+
+        <section id="maps" class="section">
+            <h2><i class="fas fa-map-marked-alt"></i> خرائط الطقس</h2>
+            <div class="map-container">
+                <div id="weatherMap"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2025 redsidزائر</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/maps.js"></script>
+</body>
+</html>
